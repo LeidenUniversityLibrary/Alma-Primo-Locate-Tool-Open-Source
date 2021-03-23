@@ -1,0 +1,334 @@
+<!-- Custom HTML site displayed as the Home chapter -->
+{% block extrahead %}
+<meta name="title" content="Alma-Primo Locate Tool">
+<meta name="description" content="The open-source solution for guiding patrons to books in your open stacks">
+<meta name="keywords" content="library, alma, primo, exlibris, open source, locate tool, books, open stacks, leiden university,">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="author" content="Leiden University Libraries">
+
+{% endblock %}
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+
+    .md-main {
+        flex-grow: 0
+    }
+
+    .md-main__inner {
+        display: flex;
+        height: 100%;
+    }
+
+    .tx-container {
+        padding-top: .0rem;
+    }
+
+    .tx-hero {
+        margin: 0 .8rem;
+        color: var(--md-primary-bg-color);
+    }
+
+    .tx-hero h1 {
+        margin-bottom: 1rem;
+        color: currentColor;
+        font-weight: 700
+    }
+
+    .tx-hero__content {
+        padding-bottom: 1rem;
+        margin: 0 auto;
+    }
+
+    .tx-hero__image{
+        width:auto;
+        max-width: 23rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        order:1;
+    }
+
+    .tx-hero .md-button {
+        margin-top: .5rem;
+        margin-right: .5rem;
+        color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button--primary {
+        background-color: var(--md-primary-bg-color);
+        color: #fff;
+        border-color: var(--md-primary-bg-color)
+    }
+
+    .tx-hero .md-button:focus,
+    .tx-hero .md-button:hover {
+        background-color: var(--md-accent-fg-color);
+        color: var(--md-default-bg-color);
+        border-color: var(--md-accent-fg-color)
+    }
+
+    .feature-item h2 svg {
+        height: 30px;
+        float: left;
+        margin-right: 10px;
+        transform: translateY(10%);
+    }
+
+    .top-hr {
+        margin-top: 42px;
+    }
+
+    .feature-item {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        box-sizing: border-box;
+        padding: 0 15px;
+        word-break: break-word
+    }
+
+    .feature-item h2 {
+        color: var(--md-primary-bg-color);
+        fill: var(--md-primary-bg-color);
+        stroke: var(--md-primary-bg-color);
+        font-weight: 300;
+        font-size: 2.4em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: normal;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-family: inherit;
+    }
+
+    .feature-item p {
+        font-size: 1.5em;
+        line-height: 1.8em;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        color: var(--md-footer-fg-color);
+        margin: 0 0 10px;
+        display: block;
+    }
+
+    @media screen and (max-width:30em) {
+        .tx-hero h1 {
+            font-size: 1.4rem
+        }
+    }
+
+    @media screen and (min-width:60em) {
+        .md-sidebar--secondary {
+            display: none
+        }
+
+        .tx-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tx-hero__content {
+            max-width: 22rem;
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            margin-left: 1.0rem;
+            margin-right: 4.0rem;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width:76.25em) {
+        .md-sidebar--primary {
+            display: none
+        }
+
+        .top-hr {
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .bottom-hr {
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            max-width: 61rem;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0 .2rem;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .feature-item:hover {
+            background-color: #526cfe47;
+            border-radius: 3px;
+        }
+    }
+
+    .hr {
+        border-bottom: 1px solid #eee;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .text-center {
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 15px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 23px;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+
+    .logos img {
+        flex: 1 1 auto;
+        padding: 25px;
+        max-height: 130px;
+        vertical-align: middle;
+    }
+
+    .hr-logos {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .md-footer-meta__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 1.0rem;
+    }
+
+    .md-footer-social {
+        padding-top: 20px;
+    }
+</style>
+
+<!-- Main site Entry button descriptions -->
+<section class="tx-container">
+    <div class="md-grid md-typeset">
+        <div class="tx-hero">
+            <div class="tx-hero__image">
+                <img src="/assets/logo.png" alt="Leiden University Libraries Logo" draggable="false">
+            </div>
+            <div class="tx-hero__content">
+                <h1>The open-source solution for guiding patrons to books in your open stacks</h1>
+                <p>Display a button in your <b>Primo</b> environment and leverage on your <b>Alma APIs</b> to show
+                    useful information to your patrons and help them reach the books they want.</p>
+                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}"
+                    class="md-button md-button--primary">
+                    Get started
+                </a>
+                <a href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button">
+                    Go to GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main site box descriptions -->
+<div class="top-hr">
+    <div class="feature-item">
+        <h2>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-signs" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                class="svg-inline--fa fa-map-signs fa-w-16 fa-3x">
+                <path fill="currentColor"
+                    d="M507.31 84.69L464 41.37c-6-6-14.14-9.37-22.63-9.37H288V16c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v16H56c-13.25 0-24 10.75-24 24v80c0 13.25 10.75 24 24 24h385.37c8.49 0 16.62-3.37 22.63-9.37l43.31-43.31c6.25-6.26 6.25-16.38 0-22.63zM224 496c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V384h-64v112zm232-272H288v-32h-64v32H70.63c-8.49 0-16.62 3.37-22.63 9.37L4.69 276.69c-6.25 6.25-6.25 16.38 0 22.63L48 342.63c6 6 14.14 9.37 22.63 9.37H456c13.25 0 24-10.75 24-24v-80c0-13.25-10.75-24-24-24z"
+                    class=""></path>
+            </svg>
+            A useful button!
+        </h2>
+        <p><b>Guide patrons to the right building, floor, room!</b> Display a button in your Primo environment and help
+            them find their books in your open stacks.</p>
+    </div>
+    <div class="feature-item">
+        <h2>
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="grin-wink" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
+                class="svg-inline--fa fa-grin-wink fa-w-16 fa-3x">
+                <path fill="currentColor"
+                    d="M328 180c-25.69 0-55.88 16.92-59.86 42.12-1.75 11.22 11.5 18.24 19.83 10.84l9.55-8.48c14.81-13.19 46.16-13.19 60.97 0l9.55 8.48c8.48 7.43 21.56.25 19.83-10.84C383.88 196.92 353.69 180 328 180zm-160 60c17.67 0 32-14.33 32-32s-14.33-32-32-32-32 14.33-32 32 14.33 32 32 32zm185.55 64.64c-25.93 8.3-64.4 13.06-105.55 13.06s-79.62-4.75-105.55-13.06c-9.94-3.13-19.4 5.37-17.71 15.34C132.67 367.13 196.06 400 248 400s115.33-32.87 123.26-80.02c1.68-9.89-7.67-18.48-17.71-15.34zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 448c-110.28 0-200-89.72-200-200S137.72 56 248 56s200 89.72 200 200-89.72 200-200 200z"
+                    class=""></path>
+            </svg>
+            Easy to manage
+        </h2>
+        <p>Create alerts, building, and locations with just a few clicks in a <b>clear and simple to use admin
+                panel</b>.</p>
+    </div>
+    <div class="feature-item">
+        <h2>
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="door-open" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"
+                class="svg-inline--fa fa-door-open fa-w-20 fa-3x">
+                <path fill="currentColor"
+                    d="M288 288c13.25 0 24-14.33 24-32s-10.75-32-24-32-24 14.33-24 32 10.75 32 24 32zm336 176H512V113.45C512 86.19 490.47 64 464 64h-80V33.18C384 14.42 369.21 0 352.06 0c-2.57 0-5.19.32-7.83 1.01l-192 49.74C137.99 54.44 128 67.7 128 82.92V464H16c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16zm-288 0H176V94.18l160-41.45V464zm128 0h-80V112h80v352z"
+                    class=""></path>
+            </svg>
+            Open Source
+        </h2>
+        <p>Developed by Leiden University Libraries, but <b>available for everyone to use and improve!</b> Help us and
+            the
+            community push this application forward by contributing to the code.</p>
+    </div>
+    <div class="feature-item">
+        <h2>
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="book" role="img"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-book fa-w-14 fa-3x">
+                <path fill="currentColor"
+                    d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"
+                    class=""></path>
+            </svg>
+            Great documentation
+        </h2>
+        <p>The documentation is updated regularly and helps you implement APLT in your Library step by step.</p>
+    </div>
+</div>
+
+<div class="top-hr">
+    <div class="hr">
+    </div>
+</div>
+
+
+<!-- Custom narrow footer -->
+<div class="md-footer-meta__inner md-grid">
+    <div class="md-footer-social">
+        <a class="md-footer-social__link" href="https://github.com/LeidenUniversityLibrary/" rel="noopener"
+            target="_blank" title="github.com">
+            <svg viewBox="0 0 480 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z">
+                </path>
+            </svg>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

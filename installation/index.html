@@ -11,10 +11,10 @@
       
       
       
-        <link rel="canonical" href="https://github.com/LeidenUniversityLibrary/Alma-Primo-Locate-Tool-Open-Source/installation/">
+        <link rel="canonical" href="https://leidenuniversitylibrary.github.io/Alma-Primo-Locate-Tool-Open-Source/installation/">
       
-      <link rel="shortcut icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1655a90d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -77,11 +77,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://github.com/LeidenUniversityLibrary/Alma-Primo-Locate-Tool-Open-Source" title="Alma-Primo Locate Tool" class="md-header__button md-logo" aria-label="Alma-Primo Locate Tool">
+    <a href=".." title="Alma-Primo Locate Tool" class="md-header__button md-logo" aria-label="Alma-Primo Locate Tool" data-md-component="logo">
       
   <img src="../assets/favicon.png" alt="logo">
 
@@ -242,14 +240,12 @@
                   <div class="md-sidebar__inner">
                     
 
-
-
   
 
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://github.com/LeidenUniversityLibrary/Alma-Primo-Locate-Tool-Open-Source" title="Alma-Primo Locate Tool" class="md-nav__button md-logo" aria-label="Alma-Primo Locate Tool">
+    <a href=".." title="Alma-Primo Locate Tool" class="md-nav__button md-logo" aria-label="Alma-Primo Locate Tool" data-md-component="logo">
       
   <img src="../assets/favicon.png" alt="logo">
 
@@ -944,9 +940,9 @@ You can add as many users as necessary.</p>
 <h2 id="activating-the-locate-button-in-alma">Activating the "Locate" button in Alma</h2>
 <p>Once you have your application running, it is time to make some changes in Alma. Alma, by default, can display a button in Primo with the text "Locate". The way to activate this button is a bit hidden, so we are descbing it here too.</p>
 <p>1) In Alma, navigate to Alma configuration -&gt; General -&gt; External Systems -&gt; Integration Profiles.
-<img alt="The Alma Integration Profiles link" src="/assets/img/alma-admin-integ-prof.png" /></p>
-<p>2) Click on "Add Integraiton Profile" and fill in the fields. You can assign any code and any name, but the "Intergration Type" must be "Discovery Interface".</p>
-<p><img alt="The Alma Integration Profiles link" src="/assets/img/alma-admin-integ-prof-generate.png" /></p>
+<img alt="The Alma Integration Profiles link" src="../assets/img/alma-admin-integ-prof.png" /></p>
+<p>2) Click on "Add Integraiton Profile" and fill in the fields. You can assign any code and any name, but the "Intergration Type" must be "Discovery Interface".
+<img alt="The Alma Integration Profiles link" src="../assets/img/alma-admin-integ-prof-generate.png" /></p>
 <p>3) In step 2, in "URL template", type:
 <code>https://yourapplication.com/find/{location_code}</code> - Your application can be hosted in a sub-site, but the <code>/find/{location_code}</code> path must always be present.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
 <div class="admonition example">
@@ -957,8 +953,8 @@ You can add as many users as necessary.</p>
 <p>5) Click on Save. The "Locate" button will now appear in Primo, next to books or items kept in therelated Alma Locations.</p>
 <h2 id="modifying-the-locate-label">Modifying the "Locate" label</h2>
 <p>The button that appears in Primo is a standard button designed by ExLibrs. If you would like to replace the word "Locate" with something else, go to the <strong>Discovery Interface Labels</strong> and modify the <code>c.uresolver.locate</code> label.
-<img alt="The Alma Integration Profiles link" src="/assets/img/alma-admin-locate.png" /></p>
-<p><img alt="The Alma Integration Profiles link" src="/assets/img/primo-locate-button.png" /></p>
+<img alt="The Alma Integration Profiles link" src="../assets/img/alma-admin-locate.png" /></p>
+<p><img alt="The Alma Integration Profiles link" src="../assets/img/primo-locate-button.png" /></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -1030,6 +1026,7 @@ You can add as many users as necessary.</p>
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -1065,7 +1062,7 @@ You can add as many users as necessary.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.tracking"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>

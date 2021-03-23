@@ -44,10 +44,10 @@ You can embed Google Maps in your building. To add a Google Maps:
 5. Paste the code in the Google Maps field.
 
 On Google Maps:
-![Google Maps in APLT](/assets/img/gmaps.png)
+![Google Maps in APLT](assets/img/gmaps.png)
 
 In the Admin Panel:
-![Google Maps in APLT](/assets/img/gmaps2.png)
+![Google Maps in APLT](assets/img/gmaps2.png)
 
 ## Locations
 

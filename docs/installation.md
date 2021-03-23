@@ -124,11 +124,10 @@ If you do not have a SSH connection, and you are using the FTP-only method, run 
 Once you have your application running, it is time to make some changes in Alma. Alma, by default, can display a button in Primo with the text "Locate". The way to activate this button is a bit hidden, so we are descbing it here too.
 
 1) In Alma, navigate to Alma configuration -> General -> External Systems -> Integration Profiles.
-![The Alma Integration Profiles link](/assets/img/alma-admin-integ-prof.png)
+![The Alma Integration Profiles link](assets/img/alma-admin-integ-prof.png)
 
 2) Click on "Add Integraiton Profile" and fill in the fields. You can assign any code and any name, but the "Intergration Type" must be "Discovery Interface".
-
-![The Alma Integration Profiles link](/assets/img/alma-admin-integ-prof-generate.png)
+![The Alma Integration Profiles link](assets/img/alma-admin-integ-prof-generate.png)
 
 3) In step 2, in "URL template", type:
 `https://yourapplication.com/find/{location_code}` - Your application can be hosted in a sub-site, but the `/find/{location_code}` path must always be present.[^2]
@@ -142,9 +141,9 @@ Once you have your application running, it is time to make some changes in Alma.
 ## Modifying the "Locate" label
 
 The button that appears in Primo is a standard button designed by ExLibrs. If you would like to replace the word "Locate" with something else, go to the **Discovery Interface Labels** and modify the `c.uresolver.locate` label.
-![The Alma Integration Profiles link](/assets/img/alma-admin-locate.png)
+![The Alma Integration Profiles link](assets/img/alma-admin-locate.png)
 
-![The Alma Integration Profiles link](/assets/img/primo-locate-button.png)
+![The Alma Integration Profiles link](assets/img/primo-locate-button.png)
 
 [^1]:
     Please see the [official Laravel documentation](https://laravel.com/docs/7.x) for a more detailed explenation on how to deploy a Laravel application.

@@ -3,7 +3,7 @@
 The Alma-Primo Locate Tool (APLT) is an open-source web application that uses the **Alma API** and **Alma** to display a button in **Primo**. The button links to pages that help patrons find items around your Library building(s) and rooms.  
 
 Let's see it in action:
-![Alma-Primo Locate Tool in action!](/assets/img/APLT.gif)
+![Alma-Primo Locate Tool in action!](assets/img/APLT.gif)
 
 In this example a user wanted to loan a book from our Special Collections, but it turns out that the book cannot be loaned. It can only consulted in the library!  
 

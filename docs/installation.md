@@ -1,6 +1,8 @@
 # Local and server installation
 
-Installing APLT is easy. In this guide we will explain how to install the application locally on your machine, and on your server. Note that there are multiple ways of running an applicaiton made using Laravel. The ways described here are meant for users whom are interested simply at giving a look at the application.[^1]
+In this guide we will explain how to install the application [locally on your machine](#local-installation), and [on your server](#server-installation).
+Installing APLT is similar to installing other Laravel applications, but this guide does not assume Laravel experience.
+Note that there are multiple ways of running an application made using Laravel. The ways described here are meant for users who are interested to first try out the application.[^1]
 
 ## Local installation
 
@@ -12,11 +14,11 @@ Assuming you have [Composer](https://getcomposer.org/) and PHP installed locally
 2. `composer install` to install the required dependencies.  
 3. `cp .env.example .env` to generate a .env file.  
 4. `php artisan key:generate` to generate an encryption key.
-5. Add your Alma API key in the `.env` file .
+5. Add your Alma API key in the `.env` file.
 
 Your application is now ready to run, but has no database attached to it yet.  
 
-Please take the time to familiarize with the .env file. The variables in this file are crucicial for your application to work properly.
+Please take the time to familiarize with the .env file. The variables in this file are crucial for your application to work properly.
 
 ### Local Database
 
@@ -146,5 +148,5 @@ The button that appears in Primo is a standard button designed by ExLibrs. If yo
 ![The Alma Integration Profiles link](assets/img/primo-locate-button.png)
 
 [^1]:
-    Please see the [official Laravel documentation](https://laravel.com/docs/7.x) for a more detailed explenation on how to deploy a Laravel application.
+    Please see the [official Laravel documentation](https://laravel.com/docs/7.x) for a more detailed explanation on how to deploy a Laravel application.
 [^2]: This can be modified in the code, by modifing the routes in `web.php` file.
